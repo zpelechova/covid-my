@@ -26,8 +26,7 @@ Apify.main(async () => {
 
         const testedPositive = $('#container_content > div.editable > center:nth-child(10) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span').text();
         const testedNegative = $("#container_content > div.editable > center:nth-child(10) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span").text();
-        const testedPending = $('#container_content > div.editable > center:nth-child(10) > table > tbody > tr:nth-child(3) > td:nth-child(2) > span').text();
-        const testedTotal = $("#container_content > div.editable > center:nth-child(10) > table > tbody > tr:nth-child(4) > td:nth-child(2) > span > strong").text();
+
         const recovered = $("#container_content > div.editable > center:nth-child(12) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span").text();
         const inICU = $("#container_content > div.editable > center:nth-child(12) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span").text();
         const deceased = $("#container_content > div.editable > center:nth-child(12) > table > tbody > tr:nth-child(3) > td:nth-child(2) > span").text();
@@ -35,8 +34,7 @@ Apify.main(async () => {
         const data = {
             testedPositive: testedPositive,
             testedNegative: testedNegative,
-            testedPending: testedPending,
-            testedTotal: testedTotal,
+            testedTotal: Number(testedPositive) + Number(testedNegative),
             recovered: recovered,
             inICU: inICU,
             deceased: deceased,
