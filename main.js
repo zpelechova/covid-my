@@ -27,10 +27,10 @@ Apify.main(async () => {
         const testedPositive = $('#container_content > div.editable > center:nth-child(10) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span').text();
         const testedNegative = $("#container_content > div.editable > center:nth-child(10) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span").text();
 
-        const recovered = $("#container_content > div.editable > center:nth-child(12) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span").text();
-        const inICU = $("#container_content > div.editable > center:nth-child(12) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span").text();
-        const deceased = $("#container_content > div.editable > center:nth-child(12) > table > tbody > tr:nth-child(3) > td:nth-child(2) > span").text();
-        
+        const recovered = $("#container_content > div.editable > center:nth-child(11) > table > tbody > tr:nth-child(1) > td:nth-child(2) > span").text();
+        const inICU = $("#container_content > div.editable > center:nth-child(11) > table > tbody > tr:nth-child(2) > td:nth-child(2) > span").text();
+        const deceased = $("#container_content > div.editable > center:nth-child(11) > table > tbody > tr:nth-child(3) > td:nth-child(2) > span").text();
+
         const data = {
             testedPositive: testedPositive,
             testedNegative: testedNegative,
